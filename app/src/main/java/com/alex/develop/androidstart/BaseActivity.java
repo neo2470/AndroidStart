@@ -7,6 +7,7 @@ import net.youmi.android.AdManager;
 import com.alex.develop.settings.Remote;
 import com.alex.develop.uihelper.ConfirmDialog;
 import com.alex.develop.uihelper.ConfirmDialog.OnConfirmListener;
+import com.alex.develop.util.ApplicationHelper;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -54,8 +55,7 @@ public class BaseActivity extends FragmentActivity {
 
 				exitTime = System.currentTimeMillis();
 			} else {
-//				ApplicationHelper.exitApplication();
-                finish();
+				ApplicationHelper.exitApplication();
 			}
 			return true;
 		}
@@ -76,7 +76,7 @@ public class BaseActivity extends FragmentActivity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-//		ApplicationHelper.remove(this);
+		ApplicationHelper.remove(this);
 	}
 	
 	@SuppressLint("CommitTransaction")
@@ -180,7 +180,7 @@ public class BaseActivity extends FragmentActivity {
 	 */
 	private void initialize() {
 		
-//		ApplicationHelper.add(this);
+		ApplicationHelper.add(this);
 		
 		backTwice2Exit = true;
 		blockBack = false;

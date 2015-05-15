@@ -35,7 +35,7 @@ public class Splash extends BaseActivity {
 
 		initialize();
 		
-		initYoumiAd();// Youmi ads
+//		initYoumiAd();// Youmi ads
 		
 		new Handler().postDelayed(new Runnable() {
 

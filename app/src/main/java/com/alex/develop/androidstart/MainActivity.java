@@ -13,6 +13,7 @@ public class MainActivity extends BaseActivity{
 		super.onCreate(savedInstanceState);
 		changeThemeByTime();
 		setContentView(R.layout.main_activity);
-		checkForUpdate();
 	}
+
+	private final int LAYOUT_CONTENT_ID = R.id.content;// 用于放置各种不同的Fragment
 }
